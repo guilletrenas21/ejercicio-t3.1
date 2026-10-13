@@ -1,0 +1,168 @@
+:root {
+    --fondo-oscuro: #2c2c2c;
+    --fondo-tarjeta: #f4f5f7;
+    --boton-azul-color: #3b82f6;
+    --texto-principal: #111827;
+    --fuente-principal: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--texto-principal);
+    background-color: #ffffff;
+}
+
+.cabecera {
+    padding: 20px 50px;
+}
+
+.enlaces-navegacion {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.enlaces-navegacion a {
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.enlaces-navegacion a.activo {
+    color: #000;
+}
+
+.portada {
+    background-color: var(--fondo-oscuro);
+    color: white;
+    margin: 0 50px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.portada h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.boton-texto {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.imagen-portada img {
+    max-width: 100%;
+    height: auto;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 0;
+}
+
+.elemento-categoria {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.elemento-categoria img {
+    width: 45px; 
+    height: auto;
+    object-fit: contain;
+}
+
+.productos-destacados {
+    padding: 20px 50px 60px 50px;
+}
+
+.productos-destacados h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cuadricula-productos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tarjeta-producto {
+    background-color: var(--fondo-tarjeta);
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta-producto img {
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-producto h3 {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+.boton-azul {
+    background-color: var(--boton-azul-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.boton-azul:hover {
+    background-color: #2563eb;
+}
+
+.seccion-contacto {
+    padding: 40px 50px;
+    background-color: var(--fondo-tarjeta);
+    text-align: center;
+}
+
+.seccion-contacto h2 {
+    margin-bottom: 10px;
+}
+
+.formulario-contacto {
+    max-width: 500px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-contacto input, .formulario-contacto textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
