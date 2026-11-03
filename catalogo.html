@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo - Tienda de Ordenadores</title>
-    <link rel="icon" type="image/x-icon" href="logotipoweb.ico">
+    <title>Catalogo - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
     <link rel="stylesheet" href="style.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<footer style="background-color: #2c2c2c; color: white; text-align: center; padding: 20px; margin-top: 40px;">
-        <p>
-            <a rel="license" href="img/logotipoweb.ico">
-                <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
-            </a>
-            <br />Este obra está bajo una <a rel="license" href="img/logotipoweb.ico" style="color: #3b82f6;">Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a>.
-        </p>
-    </footer>
+
 <body>
 
     <header class="cabecera">
         <nav class="navegacion">
             <ul class="enlaces-navegacion">
                 <li><a href="tienda.html">INICIO</a></li>
-                <li><a href="catalogo.html" class="activo">CATÁLOGO</a></li>
+                <li><a href="catalogo.html" class="activo">CATALOGO</a></li>
                 <li><a href="detalle.html">PRODUCTO</a></li>
+                <li><a href="carrito.html">CARRITO (<span id="contador-carrito">0</span>)</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="banner-catalogo">
-            <h1>Catálogo de productos</h1>
-            <p>Descubre nuestra selección de ordenadores y accesorios.</p>
+            <h1>Catalogo de productos</h1>
+            <p>Descubre nuestra seleccion de ordenadores y accesorios.</p>
         </section>
+
+        <div class="barra-buscador">
+            <input type="text" id="buscador" placeholder="Buscar producto..." onkeyup="filtrarProductos()">
+        </div>
 
         <section class="productos-catalogo">
             <div class="cuadricula-productos">
@@ -41,36 +39,45 @@
                 <article class="tarjeta-producto">
                     <img src="img/Captura de pantalla 2026-10-13 a las 16.17.48.png" alt="HP Victus">
                     <h3>HP - Victus 16.1"<br>Gaming Laptop</h3>
-                    <p class="precio">899.99 €</p>
-                    <a href="detalle.html"><button class="boton-azul">Añadir al carrito</button></a>
+                    <p class="precio">899.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('HP - Victus 16.1 Gaming Laptop', 899.99)">Anadir al carrito</button>
                 </article>
                 
                 
                 <article class="tarjeta-producto">
                     <img src="img/Captura de pantalla 2026-10-13 a las 16.18.05.png" alt="Dell G15">
                     <h3>Dell - G15 15.6"<br>Gaming Laptop</h3>
-                    <p class="precio">899.99 €</p>
-                    <a href="detalle.html"><button class="boton-azul">Añadir al carrito</button></a>
+                    <p class="precio">899.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('Dell - G15 15.6 Gaming Laptop', 899.99)">Anadir al carrito</button>
                 </article>
 
                 
                 <article class="tarjeta-producto">
                     <img src="img/Captura de pantalla 2026-10-13 a las 16.18.20.png" alt="ASUS ROG">
                     <h3>ASUS - ROG<br>Gaming Desktop</h3>
-                    <p class="precio">1,499.99 €</p>
-                    <a href="detalle.html"><button class="boton-azul">Añadir al carrito</button></a>
+                    <p class="precio">1,499.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('ASUS - ROG Gaming Desktop', 1499.99)">Anadir al carrito</button>
                 </article>
 
               
                 <article class="tarjeta-producto">
                     <img src="img/Captura de pantalla 2026-10-13 a las 16.18.27.png" alt="Acer Nitro">
                     <h3>Acer - Nitro 27"<br>Gaming Monitor</h3>
-                    <p class="precio">129.99 €</p>
-                    <a href="detalle.html"><button class="boton-azul">Añadir al carrito</button></a>
+                    <p class="precio">129.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('Acer - Nitro 27 Gaming Monitor', 129.99)">Anadir al carrito</button>
                 </article>
             </div>
         </section>
     </main>
+<footer style="background-color: #2c2c2c; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+            </a>
+            <br />Este obra esta bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #3b82f6;">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.
+        </p>
 
+    </footer>
+    <script src="carrito.js"></script>
 </body>
 </html>

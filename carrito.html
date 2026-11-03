@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabecera">
+        <nav class="navegacion">
+            <ul class="enlaces-navegacion">
+                <li><a href="tienda.html">INICIO</a></li>
+                <li><a href="catalogo.html">CATALOGO</a></li>
+                <li><a href="detalle.html">PRODUCTO</a></li>
+                <li><a href="carrito.html" class="activo">CARRITO (<span id="contador-carrito">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-producto">
+        <h1>Tu carrito</h1>
+
+        <section id="lista-carrito" class="lista-carrito"></section>
+
+        <div class="resumen-carrito">
+            <p class="total-linea">Total: <strong id="total-carrito">0.00 EUR</strong></p>
+            <div class="acciones-carrito">
+                <button class="boton-azul" onclick="vaciarCarrito()">Vaciar carrito</button>
+                <button class="boton-azul" onclick="alert('Gracias por tu compra!'); vaciarCarrito();">Finalizar compra</button>
+            </div>
+        </div>
+    </main>
+<footer style="background-color: #2c2c2c; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+            </a>
+            <br />Este obra esta bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #3b82f6;">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.
+        </p>
+
+    </footer>
+    <script src="carrito.js"></script>
+</body>
+</html>

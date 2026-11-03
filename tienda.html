@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Tienda de Ordenadores</title>
-    <link rel="icon" type="image/x-icon" href="logotipoweb.ico">
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
     <link rel="stylesheet" href="style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,8 +17,9 @@
             <ul class="enlaces-navegacion">
                
                 <li><a href="tienda.html" class="activo">INICIO</a></li>
-                <li><a href="catalogo.html">CATÁLOGO</a></li>
+                <li><a href="catalogo.html">CATALOGO</a></li>
                 <li><a href="detalle.html">PRODUCTO</a></li>
+                <li><a href="carrito.html">CARRITO (<span id="contador-carrito">0</span>)</a></li>
             </ul>
         </nav>
     </header>
@@ -84,9 +85,26 @@
             </div>
         </section>
 
+        <section class="seccion-multimedia">
+            <h2>Conoce nuestros productos</h2>
+            <video class="video-presentacion" controls preload="metadata" muted poster="img/Captura de pantalla 2026-10-13 a las 16.24.20.png">
+                <source src="media/presentacion.mp4" type="video/mp4">
+                <source src="media/presentacion.webm" type="video/webm">
+                
+            </video>
+            <div class="reproductor-audio">
+                <p>Musica ambiental para navegar:</p>
+                <audio controls loop preload="none">
+                    <source src="media/ambiente.m4a" type="audio/mp4">
+                    <source src="media/ambiente.wav" type="audio/wav">
+                    
+                </audio>
+            </div>
+        </section>
+
         <section class="seccion-contacto">
             <h2>Contacto</h2>
-            <p>¿Tienes dudas? Escribenos.</p>
+            <p>Tienes dudas? Escribenos.</p>
             <form action="#" class="formulario-contacto">
                 <input type="text" placeholder="Nombre completo" required>
                 <input type="email" placeholder="Correo electronico" required>
@@ -101,9 +119,10 @@
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
                 <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
             </a>
-            <br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #3b82f6;">Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a>.
+            <br />Este obra esta bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #3b82f6;">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.
         </p>
 
     </footer>
+    <script src="carrito.js"></script>
 </body>
 </html>

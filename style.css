@@ -195,7 +195,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* La cuadrícula ahora se ajustará automáticamente si hay más de 4 productos */
+/* La cuadricula ahora se ajustara automaticamente si hay mas de 4 productos */
 .cuadricula-productos {
     display: flex;
     flex-wrap: wrap;
@@ -268,7 +268,7 @@ body {
     border-bottom: 2px solid #ccc;
     padding-bottom: 10px;
 }
-/* --- ESTILOS PÁGINA DETALLE DE PRODUCTO --- */
+/* --- ESTILOS PAGINA DETALLE DE PRODUCTO --- */
 .contenedor-producto {
     max-width: 1200px;
     margin: 0 auto;
@@ -406,7 +406,7 @@ body {
     line-height: 2;
 }
 
-/* --- DESCRIPCIÓN Y RELACIONADOS --- */
+/* --- DESCRIPCION Y RELACIONADOS --- */
 .descripcion-seccion, .relacionados-seccion {
     margin-bottom: 50px;
 }
@@ -446,4 +446,198 @@ body {
 .info-relacionado p {
     font-size: 0.85rem;
     color: #6b7280;
+}
+
+
+/* --- BUSCADOR DEL CATALOGO --- */
+.barra-buscador {
+    padding: 0 50px 20px;
+}
+
+.barra-buscador input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* --- PAGINA DEL CARRITO --- */
+.lista-carrito {
+    margin-bottom: 30px;
+}
+
+.fila-carrito {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.fila-carrito .btn-quitar {
+    width: auto;
+    padding: 8px 16px;
+}
+
+.resumen-carrito {
+    text-align: right;
+}
+
+.total-linea {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.acciones-carrito {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.acciones-carrito .boton-azul {
+    width: auto;
+    padding: 12px 24px;
+}
+
+/* --- MULTIMEDIA --- */
+.seccion-multimedia {
+    padding: 20px 50px 40px;
+    text-align: center;
+}
+
+.seccion-multimedia h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.video-presentacion {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+.reproductor-audio {
+    margin-top: 25px;
+}
+
+.reproductor-audio p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.reproductor-audio audio {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* --- RESPONSIVE --- */
+
+/* Ejemplo 1: tablet (hasta 900px). La cuadricula de productos pasa de 4 a 2 columnas
+   y la portada y el detalle del producto se apilan en vertical. */
+@media (max-width: 900px) {
+    .cabecera,
+    .productos-destacados,
+    .productos-catalogo,
+    .seccion-multimedia,
+    .seccion-contacto,
+    .barra-buscador {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .portada {
+        margin: 0 25px;
+        padding: 40px 30px;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .banner-catalogo {
+        margin: 20px 25px;
+        padding: 40px 30px;
+    }
+
+    .categorias {
+        flex-wrap: wrap;
+        gap: 25px 40px;
+    }
+
+    .tarjeta-producto {
+        width: calc(50% - 10px);
+    }
+
+    .detalle-principal {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .columna-imagenes {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .contenedor-producto {
+        padding: 20px 25px 60px;
+    }
+
+    .cuadricula-relacionados {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .enlaces-navegacion {
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+
+    .portada h1 {
+        font-size: 1.7rem;
+    }
+
+    .tarjeta-producto {
+        width: 100%;
+    }
+
+    .acciones-compra {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-anadir {
+        max-width: none;
+    }
+
+    .columna-info h1 {
+        font-size: 1.4rem;
+    }
+
+    .precio-grande {
+        font-size: 1.8rem;
+    }
+
+    .fila-carrito {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .resumen-carrito {
+        text-align: center;
+    }
+
+    .acciones-carrito {
+        flex-direction: column;
+    }
+
+    .acciones-carrito .boton-azul {
+        width: 100%;
+    }
 }
