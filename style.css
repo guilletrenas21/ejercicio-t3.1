@@ -194,8 +194,6 @@ body {
     margin-bottom: 15px;
     font-size: 1.1rem;
 }
-
-/* La cuadricula ahora se ajustara automaticamente si hay mas de 4 productos */
 .cuadricula-productos {
     display: flex;
     flex-wrap: wrap;
@@ -209,7 +207,6 @@ body {
 }
 
 
-/* --- ESTILOS PARA EL DETALLE DEL PRODUCTO --- */
 .contenedor-detalle {
     padding: 50px;
 }
@@ -268,7 +265,6 @@ body {
     border-bottom: 2px solid #ccc;
     padding-bottom: 10px;
 }
-/* --- ESTILOS PAGINA DETALLE DE PRODUCTO --- */
 .contenedor-producto {
     max-width: 1200px;
     margin: 0 auto;
@@ -406,7 +402,6 @@ body {
     line-height: 2;
 }
 
-/* --- DESCRIPCION Y RELACIONADOS --- */
 .descripcion-seccion, .relacionados-seccion {
     margin-bottom: 50px;
 }
@@ -449,7 +444,6 @@ body {
 }
 
 
-/* --- BUSCADOR DEL CATALOGO --- */
 .barra-buscador {
     padding: 0 50px 20px;
 }
@@ -464,7 +458,6 @@ body {
     font-size: 1rem;
 }
 
-/* --- PAGINA DEL CARRITO --- */
 .lista-carrito {
     margin-bottom: 30px;
 }
@@ -503,7 +496,6 @@ body {
     padding: 12px 24px;
 }
 
-/* --- MULTIMEDIA --- */
 .seccion-multimedia {
     padding: 20px 50px 40px;
     text-align: center;
@@ -536,10 +528,7 @@ body {
     max-width: 400px;
 }
 
-/* --- RESPONSIVE --- */
 
-/* Ejemplo 1: tablet (hasta 900px). La cuadricula de productos pasa de 4 a 2 columnas
-   y la portada y el detalle del producto se apilan en vertical. */
 @media (max-width: 900px) {
     .cabecera,
     .productos-destacados,
