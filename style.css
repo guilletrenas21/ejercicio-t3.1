@@ -528,12 +528,161 @@ body {
     max-width: 400px;
 }
 
+.seccion-slider {
+    padding: 40px 50px 0;
+}
+
+.seccion-slider h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--fondo-tarjeta);
+}
+
+.slider-pista {
+    display: flex;
+    width: 400%;
+    animation: deslizar 16s ease-in-out infinite;
+}
+
+.slider:hover .slider-pista,
+.slider:hover .slider-barra {
+    animation-play-state: paused;
+}
+
+.slide {
+    width: 25%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.slide img {
+    height: 220px;
+    max-width: 100%;
+    object-fit: contain;
+    animation: latido 4s ease-in-out infinite;
+}
+
+.slide-texto {
+    background-color: var(--fondo-oscuro);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.slider-barra {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: var(--boton-azul-color);
+    animation: progreso 4s linear infinite;
+}
+
+@keyframes deslizar {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-25%); }
+    50%, 70% { transform: translateX(-50%); }
+    75%, 95% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes progreso {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulso {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6); }
+    50% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+}
+
+@keyframes rebote {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.contenido-portada {
+    animation: aparecer 1s ease-out both;
+}
+
+.imagen-portada img {
+    animation: aparecer 1s ease-out 0.4s both;
+}
+
+.boton-texto {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: var(--boton-azul-color);
+    animation: pulso 2s ease-in-out infinite;
+}
+
+.elemento-categoria:hover img {
+    animation: rebote 0.6s ease-in-out infinite;
+}
+
+.tarjeta-producto {
+    animation: aparecer 0.8s ease-out both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-producto:nth-child(2) { animation-delay: 0.15s; }
+.tarjeta-producto:nth-child(3) { animation-delay: 0.3s; }
+.tarjeta-producto:nth-child(4) { animation-delay: 0.45s; }
+
+.tarjeta-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-producto img {
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-producto:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
 
 @media (max-width: 900px) {
     .cabecera,
     .productos-destacados,
     .productos-catalogo,
     .seccion-multimedia,
+    .seccion-slider,
     .seccion-contacto,
     .barra-buscador {
         padding-left: 25px;
@@ -591,6 +740,15 @@ body {
 
     .portada h1 {
         font-size: 1.7rem;
+    }
+
+    .slide img {
+        height: 140px;
+    }
+
+    .slide-texto {
+        font-size: 0.85rem;
+        text-align: center;
     }
 
     .tarjeta-producto {
