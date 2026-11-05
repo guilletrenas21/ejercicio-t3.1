@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <nav class="navegacion">
+            <ul class="enlaces-navegacion">
+                <li><a href="tienda.html">INICIO</a></li>
+                <li><a href="catalogo.html">CATALOGO</a></li>
+                <li><a href="accesorios.html" class="activo">ACCESORIOS</a></li>
+                <li><a href="detalle.html">PRODUCTO</a></li>
+                <li><a href="carrito.html">CARRITO (<span id="contador-carrito">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner-catalogo banner-accesorios">
+            <h1>Accesorios informaticos</h1>
+            <p>Teclados, ratones, auriculares y todo lo que necesitas para tu ordenador.</p>
+        </section>
+
+        <section class="ventajas">
+            <div class="ventaja">
+                <strong>Envio gratis</strong>
+                <span>En pedidos de mas de 50 EUR</span>
+            </div>
+            <div class="ventaja">
+                <strong>2 anos de garantia</strong>
+                <span>En todos los accesorios</span>
+            </div>
+            <div class="ventaja">
+                <strong>Devolucion facil</strong>
+                <span>Tienes 30 dias</span>
+            </div>
+        </section>
+
+        <div class="barra-buscador">
+            <input type="text" id="buscador" placeholder="Buscar accesorio..." onkeyup="filtrarProductos()">
+        </div>
+
+        <section class="productos-catalogo">
+            <div class="cuadricula-productos">
+
+                <article class="tarjeta-producto tarjeta-accesorio">
+                    <span class="etiqueta">Nuevo</span>
+                    <img src="img/accesorios/teclado.svg" alt="Teclado mecanico">
+                    <h3>Teclado mecanico<br>RGB</h3>
+                    <p class="precio">59.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('Teclado mecanico RGB', 59.99)">Anadir al carrito</button>
+                </article>
+
+                <article class="tarjeta-producto tarjeta-accesorio">
+                    <img src="img/accesorios/raton.svg" alt="Raton gaming">
+                    <h3>Raton gaming<br>inalambrico</h3>
+                    <p class="precio">39.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('Raton gaming inalambrico', 39.99)">Anadir al carrito</button>
+                </article>
+
+                <article class="tarjeta-producto tarjeta-accesorio">
+                    <span class="etiqueta etiqueta-oferta">-15%</span>
+                    <img src="img/accesorios/auriculares.svg" alt="Auriculares">
+                    <h3>Auriculares gaming<br>con microfono</h3>
+                    <p class="precio">49.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('Auriculares gaming con microfono', 49.99)">Anadir al carrito</button>
+                </article>
+
+                <article class="tarjeta-producto tarjeta-accesorio">
+                    <img src="img/accesorios/webcam.svg" alt="Webcam">
+                    <h3>Webcam Full HD<br>1080p</h3>
+                    <p class="precio">34.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('Webcam Full HD 1080p', 34.99)">Anadir al carrito</button>
+                </article>
+
+                <article class="tarjeta-producto tarjeta-accesorio">
+                    <img src="img/accesorios/alfombrilla.svg" alt="Alfombrilla">
+                    <h3>Alfombrilla XL<br>para raton</h3>
+                    <p class="precio">14.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('Alfombrilla XL para raton', 14.99)">Anadir al carrito</button>
+                </article>
+
+                <article class="tarjeta-producto tarjeta-accesorio">
+                    <img src="img/accesorios/altavoces.svg" alt="Altavoces">
+                    <h3>Altavoces<br>estereo 2.0</h3>
+                    <p class="precio">29.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('Altavoces estereo 2.0', 29.99)">Anadir al carrito</button>
+                </article>
+
+                <article class="tarjeta-producto tarjeta-accesorio">
+                    <span class="etiqueta etiqueta-oferta">-20%</span>
+                    <img src="img/accesorios/pendrive.svg" alt="Memoria USB">
+                    <h3>Memoria USB<br>128 GB</h3>
+                    <p class="precio">12.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('Memoria USB 128 GB', 12.99)">Anadir al carrito</button>
+                </article>
+
+                <article class="tarjeta-producto tarjeta-accesorio">
+                    <span class="etiqueta">Nuevo</span>
+                    <img src="img/accesorios/disco.svg" alt="Disco duro externo">
+                    <h3>Disco duro externo<br>2 TB</h3>
+                    <p class="precio">74.99 EUR</p>
+                    <button class="boton-azul" onclick="anadirAlCarrito('Disco duro externo 2 TB', 74.99)">Anadir al carrito</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background-color: #2c2c2c; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+            </a>
+            <br />Este obra esta bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #3b82f6;">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.
+        </p>
+
+    </footer>
+    <script src="carrito.js"></script>
+</body>
+</html>
