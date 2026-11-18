@@ -1,0 +1,130 @@
+@media (max-width: 900px) {
+    .cabecera,
+    .productos-destacados,
+    .productos-catalogo,
+    .seccion-multimedia,
+    .seccion-slider,
+    .seccion-contacto,
+    .seccion-novedades,
+    .pagina-pago,
+    .pie,
+    .barra-buscador {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .portada-carrusel {
+        margin: 20px 25px 0;
+    }
+
+    .portada {
+        padding: 40px 30px 60px;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .banner-catalogo {
+        margin: 20px 25px;
+        padding: 40px 30px;
+    }
+
+    .ventajas {
+        padding: 0 25px 30px;
+    }
+
+    .categorias {
+        flex-wrap: wrap;
+        gap: 25px 40px;
+    }
+
+    .tarjeta-producto {
+        width: calc(50% - 10px);
+    }
+
+    .detalle-principal {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .columna-imagenes {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .contenedor-producto {
+        padding: 20px 25px 60px;
+    }
+
+    .cuadricula-relacionados {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .resumen-pago {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .portada h1,
+    .portada h2 {
+        font-size: 1.7rem;
+    }
+
+    .fotos-portada img {
+        width: 80px;
+        height: 70px;
+    }
+
+    .slider .slide img {
+        height: 140px;
+    }
+
+    .slide-texto {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .tarjeta-producto {
+        width: 100%;
+    }
+
+    .ventajas {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .acciones-compra {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-anadir {
+        max-width: none;
+    }
+
+    .columna-info h1 {
+        font-size: 1.4rem;
+    }
+
+    .precio-grande {
+        font-size: 1.8rem;
+    }
+
+    .fila-carrito {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .resumen-carrito {
+        text-align: center;
+    }
+
+    .acciones-carrito {
+        flex-direction: column;
+    }
+
+    .galeria-novedad .carousel-item img {
+        height: 240px;
+    }
+}

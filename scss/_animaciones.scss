@@ -1,0 +1,110 @@
+@keyframes deslizar {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-25%); }
+    50%, 70% { transform: translateX(-50%); }
+    75%, 95% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes progreso {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulso {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6); }
+    50% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+}
+
+@keyframes rebote {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.slider-pista {
+    animation: deslizar 16s ease-in-out infinite;
+}
+
+.slider .slide img {
+    animation: latido 4s ease-in-out infinite;
+}
+
+.slider-barra {
+    animation: progreso 4s linear infinite;
+}
+
+.slider:hover .slider-pista,
+.slider:hover .slider-barra {
+    animation-play-state: paused;
+}
+
+.contenido-portada {
+    animation: aparecer 1s ease-out both;
+}
+
+.imagen-portada img,
+.fotos-portada {
+    animation: aparecer 1s ease-out 0.4s both;
+}
+
+.boton-texto {
+    animation: pulso 2s ease-in-out infinite;
+}
+
+.elemento-categoria:hover img {
+    animation: rebote 0.6s ease-in-out infinite;
+}
+
+.tarjeta-producto {
+    animation: aparecer 0.8s ease-out both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-producto:nth-child(2) { animation-delay: 0.15s; }
+.tarjeta-producto:nth-child(3) { animation-delay: 0.3s; }
+.tarjeta-producto:nth-child(4) { animation-delay: 0.45s; }
+.tarjeta-producto:nth-child(5) { animation-delay: 0.6s; }
+.tarjeta-producto:nth-child(6) { animation-delay: 0.75s; }
+.tarjeta-producto:nth-child(7) { animation-delay: 0.9s; }
+.tarjeta-producto:nth-child(8) { animation-delay: 1.05s; }
+
+.tarjeta-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-producto img {
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-producto:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.tarjeta-novedad {
+    animation: aparecer 0.8s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

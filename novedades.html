@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novedades - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top cabecera">
+        <div class="container-fluid p-0">
+            <a class="navbar-brand" href="tienda.html"><img src="img/logotipoweb.ico" width="30" height="30" alt="">Tienda de Ordenadores</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav ms-auto enlaces-navegacion">
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">CATALOGO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accesorios.html">ACCESORIOS</a></li>
+                    <li class="nav-item"><a class="nav-link activo" href="novedades.html" aria-current="page">NOVEDADES <span class="badge text-bg-success">Nuevo</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle.html">PRODUCTO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">CARRITO <span class="badge rounded-pill text-bg-primary" id="contador-carrito">0</span></a></li>
+                </ul>
+                <div class="d-flex botones-cuenta ms-lg-4 mt-3 mt-lg-0">
+                    <a class="btn btn-outline-primary btn-sm" href="login.html">Entrar</a>
+                    <a class="btn btn-outline-primary btn-sm" href="registro.html">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="banner-catalogo banner-novedades">
+            <span class="badge text-bg-success mb-3">Recien llegados</span>
+            <h1>Novedades de la tienda</h1>
+            <p>Los ultimos lanzamientos en ordenadores, monitores y accesorios.</p>
+        </section>
+
+        <section class="seccion-novedades">
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <strong>Oferta de lanzamiento:</strong> usa el codigo <strong>NOVEDAD10</strong> al pagar y ahorra un 10%.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="destacado-novedad">
+            <div class="row align-items-center g-4">
+                <div class="col-md-5 text-center">
+                    <img src="img/Captura de pantalla 2026-10-13 a las 16.18.20.png" class="img-fluid" alt="Pack Gaming Pro">
+                </div>
+                <div class="col-md-7">
+                    <span class="badge text-bg-primary mb-2">Producto estrella</span>
+                    <h2>Pack Gaming Pro</h2>
+                    <p class="text-body-secondary mb-3">Torre ASUS ROG con RTX 4060 Ti, monitor Acer Nitro de 27", teclado mecanico y raton gaming. Todo listo para jugar.</p>
+                    <p class="mb-3"><span class="precio-novedad">1,699.99 EUR</span> <span class="precio-antiguo ms-2">1,949.99 EUR</span></p>
+                    <a href="novedad-detalle.html" class="btn btn-primary btn-lg me-2">Ver detalles</a>
+                    <button class="btn btn-outline-primary btn-lg" onclick="anadirAlCarrito('Pack Gaming Pro', 1699.99)">Reservar</button>
+                </div>
+            </div>
+            </div>
+
+            <ul class="nav nav-pills filtros-novedades mb-4">
+                <li class="nav-item"><button class="nav-link active" onclick="filtrarNovedades('todos', this)">Todos</button></li>
+                <li class="nav-item"><button class="nav-link" onclick="filtrarNovedades('ordenadores', this)">Ordenadores</button></li>
+                <li class="nav-item"><button class="nav-link" onclick="filtrarNovedades('monitores', this)">Monitores</button></li>
+                <li class="nav-item"><button class="nav-link" onclick="filtrarNovedades('accesorios', this)">Accesorios</button></li>
+            </ul>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                <div class="col" data-categoria="ordenadores">
+                    <div class="card h-100 tarjeta-novedad">
+                        <span class="badge text-bg-success">Nuevo</span>
+                        <img src="img/Captura de pantalla 2026-10-13 a las 16.17.48.png" class="card-img-top" alt="HP Victus 16">
+                        <div class="card-body">
+                            <h3 class="card-title h5">HP Victus 16 (2026)</h3>
+                            <p class="card-text text-body-secondary">Intel Core i7, RTX 4070 y pantalla de 165 Hz.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center pb-3">
+                            <strong>949.99 EUR</strong>
+                            <button class="btn btn-primary btn-sm" onclick="anadirAlCarrito('HP Victus 16 (2026)', 949.99)">Anadir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-categoria="ordenadores">
+                    <div class="card h-100 tarjeta-novedad">
+                        <span class="badge text-bg-danger">-10%</span>
+                        <img src="img/Captura de pantalla 2026-10-13 a las 16.18.05.png" class="card-img-top" alt="Dell G15">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Dell G15 Edicion Blanca</h3>
+                            <p class="card-text text-body-secondary">Ryzen 7, 16 GB de RAM y 1 TB SSD.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center pb-3">
+                            <strong>979.99 EUR</strong>
+                            <button class="btn btn-primary btn-sm" onclick="anadirAlCarrito('Dell G15 Edicion Blanca', 979.99)">Anadir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-categoria="monitores">
+                    <div class="card h-100 tarjeta-novedad">
+                        <span class="badge text-bg-success">Nuevo</span>
+                        <img src="img/Captura de pantalla 2026-10-13 a las 16.18.27.png" class="card-img-top" alt="Acer Nitro">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Acer Nitro 27" QHD</h3>
+                            <p class="card-text text-body-secondary">Resolucion 2K, 180 Hz y 1 ms.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center pb-3">
+                            <strong>249.99 EUR</strong>
+                            <button class="btn btn-primary btn-sm" onclick="anadirAlCarrito('Acer Nitro 27 QHD', 249.99)">Anadir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-categoria="accesorios">
+                    <div class="card h-100 tarjeta-novedad">
+                        <span class="badge text-bg-success">Nuevo</span>
+                        <img src="img/accesorios/auriculares.webp" class="card-img-top" alt="Auriculares">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Auriculares inalambricos Pro</h3>
+                            <p class="card-text text-body-secondary">Sonido envolvente y 30 horas de bateria.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center pb-3">
+                            <strong>69.99 EUR</strong>
+                            <button class="btn btn-primary btn-sm" onclick="anadirAlCarrito('Auriculares inalambricos Pro', 69.99)">Anadir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-categoria="accesorios">
+                    <div class="card h-100 tarjeta-novedad">
+                        <span class="badge text-bg-danger">-15%</span>
+                        <img src="img/accesorios/teclado.jpg" class="card-img-top" alt="Teclado">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Teclado compacto 60% RGB</h3>
+                            <p class="card-text text-body-secondary">Teclas mecanicas y luces de colores.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center pb-3">
+                            <strong>44.99 EUR</strong>
+                            <button class="btn btn-primary btn-sm" onclick="anadirAlCarrito('Teclado compacto 60% RGB', 44.99)">Anadir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" data-categoria="accesorios">
+                    <div class="card h-100 tarjeta-novedad">
+                        <span class="badge text-bg-success">Nuevo</span>
+                        <img src="img/accesorios/webcam.jpg" class="card-img-top" alt="Webcam">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Webcam Full HD con microfono</h3>
+                            <p class="card-text text-body-secondary">Ideal para clases y videollamadas.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center pb-3">
+                            <strong>39.99 EUR</strong>
+                            <button class="btn btn-primary btn-sm" onclick="anadirAlCarrito('Webcam Full HD con microfono', 39.99)">Anadir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="container-fluid p-0">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>Tienda de Ordenadores</h5>
+                    <p>Ordenadores, monitores y accesorios con envio rapido y 2 anos de garantia.</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Tienda</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Mi cuenta</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="login.html">Iniciar sesion</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6>Recibe nuestras ofertas</h6>
+                    <form id="form-boletin" class="input-group" novalidate>
+                        <input type="email" class="form-control" placeholder="tu@correo.com" aria-label="Correo electronico" required>
+                        <button class="btn btn-primary" type="submit">Suscribirme</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="licencia text-center">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                    <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+                </a>
+                <br />Este obra esta bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="carrito.js"></script>
+    <script src="js/tienda.js"></script>
+</body>
+</html>
