@@ -1,0 +1,152 @@
+.productos-destacados {
+    padding: 20px 50px 60px 50px;
+}
+
+.productos-destacados h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cuadricula-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.tarjeta-producto {
+    background-color: var(--fondo-tarjeta);
+    padding: 30px 20px;
+    border: 1px solid $borde;
+    border-radius: 12px;
+    text-align: center;
+    width: 23%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta-producto img {
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-producto h3 {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+.boton-azul {
+    background-color: var(--boton-azul-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.boton-azul:hover {
+    background-color: $azul-oscuro;
+}
+
+.precio {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.banner-catalogo {
+    background: linear-gradient(135deg, $oscuro 0%, $azul-noche 100%);
+    color: white;
+    padding: 60px 50px;
+    margin: 20px 50px;
+    border-radius: 12px;
+}
+
+.banner-catalogo h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.banner-catalogo p {
+    font-size: 1rem;
+    color: #e5e7eb;
+}
+
+.banner-accesorios {
+    background: linear-gradient(135deg, $azul-noche 0%, $azul 100%);
+}
+
+.productos-catalogo {
+    padding: 20px 50px 60px 50px;
+}
+
+.barra-buscador {
+    padding: 0 50px 20px;
+}
+
+.barra-buscador input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.ventajas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 50px 30px;
+}
+
+.ventaja {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 18px 20px;
+    border-left: 4px solid $azul;
+    background-color: var(--fondo-tarjeta);
+    border-radius: 8px;
+}
+
+.ventaja span {
+    color: $gris;
+    font-size: 0.9rem;
+}
+
+.tarjeta-accesorio {
+    position: relative;
+    background-color: #ffffff;
+}
+
+.tarjeta-accesorio img {
+    width: 150px;
+    max-width: 100%;
+    height: 110px;
+    object-fit: contain;
+}
+
+.etiqueta {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: $verde;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.etiqueta-oferta {
+    background-color: $rojo;
+}

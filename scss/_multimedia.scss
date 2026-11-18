@@ -1,0 +1,31 @@
+.seccion-multimedia {
+    padding: 20px 50px 40px;
+    text-align: center;
+}
+
+.seccion-multimedia h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.video-presentacion {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+.reproductor-audio {
+    margin-top: 25px;
+}
+
+.reproductor-audio p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.reproductor-audio audio {
+    width: 100%;
+    max-width: 400px;
+}

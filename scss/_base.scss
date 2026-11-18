@@ -1,0 +1,27 @@
+:root {
+    --fondo-oscuro: #{$oscuro};
+    --fondo-tarjeta: #{$claro};
+    --boton-azul-color: #{$azul};
+    --texto-principal: #{$texto};
+    --fuente-principal: #{$fuente};
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p, ul, ol, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+
+ul, ol {
+    padding-left: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--texto-principal);
+    background-color: #ffffff;
+}

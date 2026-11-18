@@ -1,0 +1,179 @@
+.contenedor-producto {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 50px 80px;
+}
+
+.migas-pan {
+    font-size: 0.9rem;
+    color: $gris;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $borde;
+}
+
+.migas-pan a {
+    color: $gris;
+    text-decoration: none;
+}
+
+.migas-pan strong {
+    color: $texto;
+}
+
+.detalle-principal {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.columna-imagenes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid $borde;
+    padding-right: 60px;
+}
+
+.imagen-principal {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.galeria-miniaturas {
+    display: flex;
+    gap: 15px;
+}
+
+.galeria-miniaturas img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    background-color: $claro;
+    cursor: pointer;
+}
+
+.columna-info {
+    flex: 1;
+}
+
+.columna-info h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.valoracion {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.estrellas {
+    color: #fbbf24;
+    letter-spacing: 2px;
+}
+
+.texto-valoracion {
+    color: $gris;
+    margin-left: 5px;
+}
+
+.precio-grande {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.stock {
+    color: #10b981;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.acciones-compra {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.selector-cantidad {
+    display: flex;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.btn-cantidad {
+    background-color: $borde;
+    border: none;
+    padding: 0 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.selector-cantidad input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn-anadir {
+    flex: 1;
+    max-width: 250px;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.meta-producto {
+    list-style: none;
+    font-size: 0.9rem;
+    line-height: 2;
+}
+
+.descripcion-seccion,
+.relacionados-seccion {
+    margin-bottom: 50px;
+}
+
+.descripcion-seccion h2,
+.relacionados-seccion h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.descripcion-seccion p {
+    color: #374151;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.cuadricula-relacionados {
+    display: flex;
+    gap: 40px;
+}
+
+.item-relacionado {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.item-relacionado img {
+    background-color: $claro;
+    padding: 10px;
+}
+
+.info-relacionado h4 {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.info-relacionado p {
+    font-size: 0.85rem;
+    color: $gris;
+}

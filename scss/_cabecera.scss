@@ -1,0 +1,56 @@
+.cabecera {
+    padding: 12px 50px;
+    background-color: #ffffff;
+    border-bottom: 1px solid $borde;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.enlaces-navegacion {
+    gap: 6px 26px;
+}
+
+.enlaces-navegacion .nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    padding: 6px 0;
+    color: $gris;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.enlaces-navegacion .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: $azul;
+    transition: width 0.3s ease;
+}
+
+.enlaces-navegacion .nav-link:hover,
+.enlaces-navegacion .nav-link.activo {
+    color: #000;
+}
+
+.enlaces-navegacion .nav-link:hover::after,
+.enlaces-navegacion .nav-link.activo::after {
+    width: 100%;
+}
+
+.botones-cuenta {
+    gap: 8px;
+}

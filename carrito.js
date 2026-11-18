@@ -19,7 +19,7 @@ function anadirAlCarrito(nombre, precio) {
         carrito.push({ nombre: nombre, precio: precio, cantidad: 1 });
     }
     guardarCarrito(carrito);
-    alert(nombre + " anadido al carrito");
+    mostrarAviso("Producto anadido", nombre + " ya esta en tu carrito.", "carrito.html", "Ver carrito");
 }
 
 function quitarDelCarrito(nombre) {

@@ -5,24 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accesorios - Tienda de Ordenadores</title>
     <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <header class="cabecera">
-        <nav class="navegacion">
-            <ul class="enlaces-navegacion">
-                <li><a href="tienda.html">INICIO</a></li>
-                <li><a href="catalogo.html">CATALOGO</a></li>
-                <li><a href="accesorios.html" class="activo">ACCESORIOS</a></li>
-                <li><a href="detalle.html">PRODUCTO</a></li>
-                <li><a href="carrito.html">CARRITO (<span id="contador-carrito">0</span>)</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg sticky-top cabecera">
+        <div class="container-fluid p-0">
+            <a class="navbar-brand" href="tienda.html"><img src="img/logotipoweb.ico" width="30" height="30" alt="">Tienda de Ordenadores</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav ms-auto enlaces-navegacion">
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">CATALOGO</a></li>
+                    <li class="nav-item"><a class="nav-link activo" href="accesorios.html" aria-current="page">ACCESORIOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="novedades.html">NOVEDADES <span class="badge text-bg-success">Nuevo</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle.html">PRODUCTO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">CARRITO <span class="badge rounded-pill text-bg-primary" id="contador-carrito">0</span></a></li>
+                </ul>
+                <div class="d-flex botones-cuenta ms-lg-4 mt-3 mt-lg-0">
+                    <a class="btn btn-outline-primary btn-sm" href="login.html">Entrar</a>
+                    <a class="btn btn-outline-primary btn-sm" href="registro.html">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <main>
         <section class="banner-catalogo banner-accesorios">
@@ -115,15 +126,48 @@
         </section>
     </main>
 
-    <footer style="background-color: #2c2c2c; color: white; text-align: center; padding: 20px; margin-top: 40px;">
-        <p>
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
-                <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
-            </a>
-            <br />Este obra esta bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #3b82f6;">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.
-        </p>
-
+    <footer class="pie">
+        <div class="container-fluid p-0">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>Tienda de Ordenadores</h5>
+                    <p>Ordenadores, monitores y accesorios con envio rapido y 2 anos de garantia.</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Tienda</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Mi cuenta</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="login.html">Iniciar sesion</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6>Recibe nuestras ofertas</h6>
+                    <form id="form-boletin" class="input-group" novalidate>
+                        <input type="email" class="form-control" placeholder="tu@correo.com" aria-label="Correo electronico" required>
+                        <button class="btn btn-primary" type="submit">Suscribirme</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="licencia text-center">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                    <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+                </a>
+                <br />Este obra esta bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.
+            </p>
+        </div>
     </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="carrito.js"></script>
+    <script src="js/tienda.js"></script>
 </body>
 </html>

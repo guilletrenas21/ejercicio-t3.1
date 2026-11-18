@@ -1,0 +1,51 @@
+.seccion-slider {
+    padding: 40px 50px 0;
+}
+
+.seccion-slider h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--fondo-tarjeta);
+}
+
+.slider-pista {
+    display: flex;
+    width: 400%;
+}
+
+.slider .slide {
+    width: 25%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.slider .slide img {
+    height: 220px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.slide-texto {
+    background-color: var(--fondo-oscuro);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.slider-barra {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: var(--boton-azul-color);
+}

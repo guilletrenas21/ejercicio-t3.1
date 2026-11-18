@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top cabecera">
+        <div class="container-fluid p-0">
+            <a class="navbar-brand" href="tienda.html"><img src="img/logotipoweb.ico" width="30" height="30" alt="">Tienda de Ordenadores</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav ms-auto enlaces-navegacion">
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">CATALOGO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accesorios.html">ACCESORIOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="novedades.html">NOVEDADES <span class="badge text-bg-success">Nuevo</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle.html">PRODUCTO</a></li>
+                    <li class="nav-item"><a class="nav-link activo" href="carrito.html" aria-current="page">CARRITO <span class="badge rounded-pill text-bg-primary" id="contador-carrito">0</span></a></li>
+                </ul>
+                <div class="d-flex botones-cuenta ms-lg-4 mt-3 mt-lg-0">
+                    <a class="btn btn-outline-primary btn-sm" href="login.html">Entrar</a>
+                    <a class="btn btn-outline-primary btn-sm" href="registro.html">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pagina-pago">
+        <div class="text-center mb-4">
+            <h1>Finalizar compra</h1>
+            <p class="text-body-secondary">Rellena tus datos para recibir el pedido.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <div class="resumen-pago">
+                    <h2 class="h5 d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-primary">Tu pedido</span>
+                        <span class="badge bg-primary rounded-pill" id="numero-productos">0</span>
+                    </h2>
+                    <ul class="list-group mb-3" id="resumen-pago"></ul>
+                    <form id="form-codigo" class="card p-2" novalidate>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="codigo-promo" placeholder="Codigo promocional" aria-label="Codigo promocional" required>
+                            <button type="submit" class="btn btn-secondary">Aplicar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-7 col-lg-8">
+                <form id="form-pago" class="bloque-pago" novalidate>
+                    <h2 class="h5 mb-3">Datos de envio</h2>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="pago-nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="pago-nombre" required>
+                            <div class="invalid-feedback">Escribe tu nombre.</div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="pago-apellidos" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="pago-apellidos" required>
+                            <div class="invalid-feedback">Escribe tus apellidos.</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="pago-email" class="form-label">Correo electronico</label>
+                            <input type="email" class="form-control" id="pago-email" placeholder="tu@correo.com" required>
+                            <div class="invalid-feedback">Escribe un correo valido.</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="pago-direccion" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="pago-direccion" placeholder="Calle, numero y piso" required>
+                            <div class="invalid-feedback">Escribe tu direccion.</div>
+                        </div>
+                        <div class="col-md-5">
+                            <label for="pago-ciudad" class="form-label">Ciudad</label>
+                            <input type="text" class="form-control" id="pago-ciudad" required>
+                            <div class="invalid-feedback">Escribe tu ciudad.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="pago-provincia" class="form-label">Provincia</label>
+                            <select class="form-select" id="pago-provincia" required>
+                                <option value="">Elige...</option>
+                                <option>Almeria</option>
+                                <option>Cadiz</option>
+                                <option>Cordoba</option>
+                                <option>Granada</option>
+                                <option>Huelva</option>
+                                <option>Jaen</option>
+                                <option>Malaga</option>
+                                <option>Sevilla</option>
+                                <option>Otra</option>
+                            </select>
+                            <div class="invalid-feedback">Elige una provincia.</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="pago-cp" class="form-label">Codigo postal</label>
+                            <input type="text" class="form-control" id="pago-cp" pattern="[0-9]{5}" required>
+                            <div class="invalid-feedback">5 numeros.</div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <h2 class="h5 mb-3">Forma de pago</h2>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input id="pago-tarjeta" name="metodo" type="radio" class="form-check-input" checked>
+                            <label class="form-check-label" for="pago-tarjeta">Tarjeta</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="pago-paypal" name="metodo" type="radio" class="form-check-input">
+                            <label class="form-check-label" for="pago-paypal">PayPal</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="pago-bizum" name="metodo" type="radio" class="form-check-input">
+                            <label class="form-check-label" for="pago-bizum">Bizum</label>
+                        </div>
+                    </div>
+
+                    <div class="row g-3" id="datos-tarjeta">
+                        <div class="col-md-6">
+                            <label for="tarjeta-titular" class="form-label">Titular de la tarjeta</label>
+                            <input type="text" class="form-control" id="tarjeta-titular" required>
+                            <div class="invalid-feedback">Escribe el titular.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="tarjeta-numero" class="form-label">Numero de tarjeta</label>
+                            <input type="text" class="form-control" id="tarjeta-numero" inputmode="numeric" pattern="[0-9 ]{16,19}" autocomplete="off" required>
+                            <div class="invalid-feedback">16 numeros.</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="tarjeta-caducidad" class="form-label">Caducidad</label>
+                            <input type="text" class="form-control" id="tarjeta-caducidad" placeholder="MM/AA" pattern="[0-9]{2}/[0-9]{2}" autocomplete="off" required>
+                            <div class="invalid-feedback">Formato MM/AA.</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="tarjeta-cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="tarjeta-cvv" inputmode="numeric" pattern="[0-9]{3}" autocomplete="off" required>
+                            <div class="invalid-feedback">3 numeros.</div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Pagar pedido</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <div class="container-fluid p-0">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>Tienda de Ordenadores</h5>
+                    <p>Ordenadores, monitores y accesorios con envio rapido y 2 anos de garantia.</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Tienda</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Mi cuenta</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="login.html">Iniciar sesion</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6>Recibe nuestras ofertas</h6>
+                    <form id="form-boletin" class="input-group" novalidate>
+                        <input type="email" class="form-control" placeholder="tu@correo.com" aria-label="Correo electronico" required>
+                        <button class="btn btn-primary" type="submit">Suscribirme</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="licencia text-center">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                    <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+                </a>
+                <br />Este obra esta bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="carrito.js"></script>
+    <script src="js/tienda.js"></script>
+</body>
+</html>

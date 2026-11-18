@@ -1,0 +1,38 @@
+.pie {
+    background-color: $oscuro;
+    color: #ffffff;
+    margin-top: 40px;
+    padding: 48px 50px 24px;
+}
+
+.pie h5,
+.pie h6 {
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.pie p {
+    color: #d1d5db;
+}
+
+.pie li {
+    margin-bottom: 8px;
+}
+
+.pie a {
+    color: #d1d5db;
+    text-decoration: none;
+}
+
+.pie a:hover {
+    color: #ffffff;
+}
+
+.pie .licencia {
+    font-size: 0.85rem;
+    color: #d1d5db;
+}
+
+.pie .licencia a {
+    color: #93c5fd;
+}

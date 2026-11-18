@@ -1,0 +1,36 @@
+.lista-carrito {
+    margin: 20px 0 30px;
+}
+
+.fila-carrito {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid $borde;
+}
+
+.fila-carrito .btn-quitar {
+    width: auto;
+    padding: 8px 16px;
+}
+
+.resumen-carrito {
+    text-align: right;
+}
+
+.total-linea {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.acciones-carrito {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.acciones-carrito .btn {
+    padding: 12px 24px;
+}

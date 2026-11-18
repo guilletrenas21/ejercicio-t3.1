@@ -1,0 +1,30 @@
+$azul: #2563eb;
+$azul-oscuro: #1d4ed8;
+$azul-noche: #1e3a8a;
+$oscuro: #2c2c2c;
+$claro: #f4f5f7;
+$texto: #111827;
+$gris: #6b7280;
+$borde: #e5e7eb;
+$verde: #047857;
+$rojo: #dc2626;
+$fuente: 'Inter', sans-serif;
+
+$primary: $azul;
+$secondary: $gris;
+$success: $verde;
+$danger: $rojo;
+$dark: $oscuro;
+$light: $claro;
+
+$body-color: $texto;
+$link-color: $azul;
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+$headings-font-weight: 700;
+$btn-font-weight: 600;
+$border-radius: .5rem;
+$border-radius-lg: .75rem;
+$card-border-color: $borde;
+$navbar-light-color: $gris;
+$navbar-light-hover-color: #000;
+$navbar-light-active-color: #000;

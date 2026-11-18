@@ -1,0 +1,57 @@
+.pagina-cuenta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(180deg, $claro 0%, #ffffff 100%);
+}
+
+.tarjeta-cuenta {
+    width: 100%;
+    max-width: 460px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.tarjeta-cuenta-ancha {
+    max-width: 640px;
+}
+
+.cabecera-cuenta {
+    background: linear-gradient(135deg, $oscuro 0%, $azul-noche 100%);
+    color: #ffffff;
+    padding: 28px;
+    text-align: center;
+}
+
+.cabecera-cuenta h1 {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+}
+
+.cabecera-cuenta p {
+    color: #e5e7eb;
+}
+
+.pagina-pago {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 50px 60px;
+}
+
+.pagina-pago h1 {
+    font-size: 2rem;
+}
+
+.bloque-pago {
+    background-color: #ffffff;
+    border: 1px solid $borde;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.resumen-pago {
+    position: sticky;
+    top: 90px;
+}
